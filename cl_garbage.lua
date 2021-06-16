@@ -210,7 +210,7 @@ Citizen.CreateThread(function()
 
                 if IsPedInAnyVehicle(PlayerPedId(-1)) == false then
                     
-                    local entity, entityDst = ESX.Game.GetClosestObject(Config.BinsAvailable)
+                    local entity, entityDst = ESX.Game.GetClosestObject(GetEntityCoords(PlayerPedId(-1)), Config.Bins)
 
                     if DoesEntityExist(entity) and entityDst <= 1.5 then
                         msec = 5
